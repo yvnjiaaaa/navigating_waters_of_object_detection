@@ -1,0 +1,26 @@
+MODEL:
+  NUM_CLASSES: 7
+  BACKBONE:
+    NAME: 'resnet50_SSD300'
+    OUT_CHANNELS: (1024, 512, 512, 256, 256, 256)
+  PRIORS:
+    FEATURE_MAPS: [38, 19, 10, 5, 3, 1]
+    STRIDES: [8, 16, 32, 64, 100, 300]
+    MIN_SIZES: [21, 45, 99, 153, 207, 261]
+    MAX_SIZES: [45, 99, 153, 207, 261, 315]
+    ASPECT_RATIOS: [[2], [2, 3], [2, 3], [2, 3], [2], [2]]
+    BOXES_PER_LOCATION: [4, 6, 6, 6, 4, 4]
+INPUT:
+  IMAGE_SIZE: 300
+DATASETS:
+  TRAIN: ("seaship_trainval",)
+  TEST: ("seaship_test", 'brightness_test_1', 'brightness_test_2', 'brightness_test_3', 'brightness_test_4', 'brightness_test_5','contrast_test_1', 'contrast_test_2', 'contrast_test_3', 'contrast_test_4', 'contrast_test_5', 'defocus_blur_test_1', 'defocus_blur_test_2', 'defocus_blur_test_3', 'defocus_blur_test_4', 'defocus_blur_test_5', 'elastic_transform_test_1', 'elastic_transform_test_2', 'elastic_transform_test_3', 'elastic_transform_test_4', 'elastic_transform_test_5', 'fog_test_1', 'fog_test_2', 'fog_test_3', 'fog_test_4', 'fog_test_5', 'frost_test_1', 'frost_test_2', 'frost_test_3', 'frost_test_4', 'frost_test_5', 'gaussian_noise_test_1', 'gaussian_noise_test_2', 'gaussian_noise_test_3', 'gaussian_noise_test_4', 'gaussian_noise_test_5', 'glass_blur_test_1', 'glass_blur_test_2', 'glass_blur_test_3', 'glass_blur_test_4', 'glass_blur_test_5', 'impulse_noise_test_1', 'impulse_noise_test_2', 'impulse_noise_test_3', 'impulse_noise_test_4', 'impulse_noise_test_5', 'jpeg_compression_test_1', 'jpeg_compression_test_2', 'jpeg_compression_test_3', 'jpeg_compression_test_4', 'jpeg_compression_test_5', 'motion_blur_test_1', 'motion_blur_test_2', 'motion_blur_test_3', 'motion_blur_test_4', 'motion_blur_test_5', 'pixelate_test_1', 'pixelate_test_2', 'pixelate_test_3', 'pixelate_test_4', 'pixelate_test_5', 'shot_noise_test_1', 'shot_noise_test_2', 'shot_noise_test_3', 'shot_noise_test_4', 'shot_noise_test_5', 'snow_test_1', 'snow_test_2', 'snow_test_3', 'snow_test_4', 'snow_test_5', 'zoom_blur_test_1', 'zoom_blur_test_2', 'zoom_blur_test_3', 'zoom_blur_test_4', 'zoom_blur_test_5')
+SOLVER:
+  # MAX_ITER: 120000
+  MAX_ITER: 60000
+  LR_STEPS: [80000, 100000]
+  GAMMA: 0.1
+  BATCH_SIZE: 32
+  LR: 0.001
+  
+OUTPUT_DIR: 'outputs/resnet50-ssd300-seaship-80000'
