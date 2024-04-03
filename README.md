@@ -14,7 +14,7 @@ For the dataset generation of the SMD dataset, we refer to the following reposit
 - [SMD dataset generation](https://github.com/tilemmpon/Singapore-Maritime-Dataset-Frames-Ground-Truth-Generation-and-Statistics)
 
 ## Object detection approaches 
-The config/args files as well as the random seeds of YOLOv8 and NanoDet-Plus are provided in **approaches/**. The SSD repo we used to implement the SSD approach does not provide the random seed parameter, but we can provide the .pth files if necessary.
+The config/args files as well as the random seeds of YOLOv8 and NanoDet-Plus are provided in **approaches/**. The SSD repo we used to implement the SSD approach does not provide the random seed parameter, but we can provide the .pth files.
 
 ## Datasets
 We use three waterborne object detection datasets: SeaShips, SMD, and SSAVE. The detailed data splitting is provided in **datasets/**. 
