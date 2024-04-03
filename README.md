@@ -1,6 +1,6 @@
 
 # navigating_waters_of_object_detection
-This repo provides supplementary materials for the repeatability of the paper "Navigating the Waters of Object Detection: Evaluating the Robustness of Real-time Object Detection Models for Autonomous Surface Vehicles". 
+This repo provides supplementary materials for the reproducibility of the paper "Navigating the Waters of Object Detection: Evaluating the Robustness of Real-time Object Detection Models for Autonomous Surface Vehicles". 
 
 ## Acknowledgments
 For the three object detection appoaches used here, we run the experiments with the codes from the following repositories:
